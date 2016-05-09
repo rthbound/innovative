@@ -25,9 +25,8 @@ Lora:400,700italic,700,400italic' rel='stylesheet' type='text/css'>
 <body>
   <script type='text/javascript'>
     $(document).ready(function(){
-      $.get("https://docs.google.com/spreadsheets/d/1rusTvBEq6LCVePit9ClcofsHW-vfDqtUZk9ILLhulLA/pub?output=csv", function(data){
-        var v = data.split("\n");
-        var html = $.map(v, function(el,i){
+      $.get("https://morning-bayou-66804.herokuapp.com/sheets/1", function(data){
+        var html = $.map(data, function(el,i){
           $(".row").append($("<p><a class='btn button-hvr-shadow-radial' href='https://twitter.com/intent/tweet?text="
                               + encodeURIComponent(el)
                               + "' target='_blank'><span><strong>"
